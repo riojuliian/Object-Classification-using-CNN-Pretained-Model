@@ -1,0 +1,192 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	min-height: 100%;
+	position: relative;
+	
+}
+.glyphicon-picture {
+    font-size: 200px;
+}
+.glyphicon-cloud-upload {
+	font-size: 30px;
+}
+body{
+    color: black;
+	background-color:whitesmoke;
+	min-height: 600px;
+	font: 400 15px Lato, sans-serif;
+}
+
+#drop{
+	border-radius: 1%;
+	border: 1px solid grey;
+	width: 55%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+	padding-left: 2%;
+}
+
+#dropbox{
+    border: 1px dashed grey;
+	border-radius: 3px;
+	position: relative;
+	margin: 20px auto 40px;
+	min-height: 200px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	width: 700px;
+	height: 200px;
+	background-color: whitesmoke;
+}
+
+.container-fluid {
+	padding: 20px 30px;
+	background-color: turquoise;
+	font: 400 10px Lato, sans-serif;
+	color: black;
+	width: 70%;
+	border-radius: 1%;
+	margin-top: 1%;
+	opacity: 0.9;
+}
+#dropbox .message{
+	font-size: 20px;
+    text-align: center;
+    padding-top: 80px;
+    display: block;
+}
+
+#dropbox:before{
+	border-radius: 3px 3px 0 0;
+}
+
+#dropbox .preview{
+	width: 245px;
+	height: 215px;
+	float: left;
+	margin: 30px 0 0 220px;
+	position: relative;
+	text-align: center;
+}
+
+#dropbox .preview img{
+	max-width: 200px;
+	max-height: 140px;
+	border: 3px solid #fff;
+	display: block;
+	box-shadow: 0 0 2px #000;
+}
+
+#dropbox .imageHolder{
+	display: inline-block;
+	position: relative;
+}
+
+#dropbox .uploaded{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url('../img/done.png') no-repeat center center rgba(255,255,255,0.5);
+	display: none;
+}
+
+#dropbox .preview.done .uploaded{
+	display: block;
+}
+
+#dropbox .progressHolder{
+	position: absolute;
+	background-color:#252f38;
+	height: 12px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	box-shadow: 0 0 2px #000;
+}
+
+#dropbox .progress{
+	background-color:#2586d0;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	width: 0;
+	box-shadow: 0 0 1px rgba(255, 255, 255, 0.4) inset;
+	-moz-transition: 0.25s;
+	-webkit-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+}
+
+#dropbox .preview.done .progress{
+	width: 100% !important;
+}
+
+
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+#sub {
+	font-size: 15px;
+	line-height: 1.375em;
+	font-weight: 400;
+	margin: 20px 0px 0px 50px;
+}
+#learnMore {
+	margin-left: 50px;
+	color: black;
+}
+
+h2{
+	margin-left:50px;
+}
+
+#big{
+	height: 100%;
+	border:1px solid black;
+}
+
+
+#upload{
+	margin-top: 30px;
+	background-color: turquoise;
+	color:white;
+}

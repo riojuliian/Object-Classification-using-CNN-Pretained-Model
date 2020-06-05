@@ -1,0 +1,93 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="main">
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 id="title">Aplikasi Pendeteksi Ras Kucing menggunakan Convolutional Neural Network</h2><br>
+        <h4 id="sub">1. Unggah Gambar (aplikasi ini hanya mendukung format data png, jpg & jpeg )
+           <br>
+        2. Pilih salah satu model yang sudah dilatih untuk digunakan: Xception atau DenseNet-201 </h4>
+        </div>
+         <div class="col-sm-4">
+            <img src="static/img/kucingfix.png" style="margin-left:6%;width:260px;height:auto">
+        </div>
+</div>
+</div>
+
+  <div class="panel">
+    <input id="file-upload" class="hidden" type="file" accept="image/x-png,image/gif,image/jpeg" />
+    <label for="file-upload" id="file-drag" class="upload-box">
+      <div id="upload-caption">Letakkan gambar disini atau klik untuk memilih</div>
+      <img id="image-preview" class="hidden" />
+    </label>
+  </div>
+
+  <div style="margin-bottom: 1rem;">
+    <input type="button" value="Prediksi dengan Xception" class="button" onclick="submitImage();" />
+    <input type="button" value="Prediksi dengan DenseNet-201" class="button" onclick="submitImageDens();" />
+  </div>
+  <div style="margin-bottom: 1rem;">
+    <input type="button" value="Bersihkan" class="button" onclick="clearImage();" />
+  </div>
+
+  <div style="margin-top: 1%; margin-bottom:3%; width: 70%; border: 1px solid black; text-align: left;">
+    <div style="width: 100%; border: 1px solid black; text-align: center;">
+        <h3>Tentang Laman ini</h3>
+    </div>
+    
+    <h4 style="margin-left: 1%;">Apa itu Convolutional Neural Network?</h4>
+    <p style="text-align: justify; margin-left: 1%; margin-right: 1%;">
+     Convolutional Neural Network (CNN) merupakan salah satu algoritma terbaik untuk pengenalan gambar (image recognition). 
+     Cara kerja CNN terinspirasi dari bagaimana jaringan syaraf manusia bekerja saat mengenali objek dari apa yang mereka lihat. 
+     CNN mengekstrak setiap ciri dari suatu gambar (dalam kasus ini untuk sebuah kucing dapat berupa telinga, hidung, mulut, dan lain-lain). 
+     Itulah mengapa CNN bekerja dengan baik walaupun gambar memiliki objek lain selain kucing pada gambar tersebut.
+    </p>
+    
+
+    <p style="text-align: justify; margin-left: 1%; margin-right: 1%;">
+            Pada aplikasi ini digunakan pre-trained model yang disediakan oleh pustaka Keras tanpa classifier. Tentunya pre-trained model tersebut sudah dilatih ulang 
+            menyesuaikan dengan kelas ras kucing yang ada. Terdapat dua model pada aplikasi ini, yaitu Xception dan DenseNet-201. 
+            Masing-masing model memiliki konfigurasi dan nilai parameter yang sama, hanya berbeda pada arsitektur CNN saja. 
+            Oleh karena itu masing-masing model memiliki kinerja atau akurasi yang berbeda
+
+           </p>
+           <br>
+           <h4 style="margin-left: 1%;">Menentukan Ras Kucing</h4>
+           <p style="text-align: justify; margin-left: 1%; margin-right: 1%;">
+                Seperti yang sudah dijelaskan sebelumnya, model CNN mengekstrak ciri dari gambar kucing dengan ras yang berbeda-beda. Tentunya setelah dilakukan ekstraksi ciri, model memiliki representasi umum
+                dalam bagaimana melakukan klasifikasi, serta membedakan ras kucing dengan model yang sudah pernah dilatih sebelumnya. Ekstraksi ciri dapat berupa panjang bulu,
+                warna, bentuk dan masih banyak lagi. Ras kucing yang terdapat pada model ini yaitu : Abyssinian, Bengal, Bombay, British Shorthair, 
+                Egyptian Mau, Maine Coon, Persian, Russian Blue, Siamese and Sphynx.     
+               </p>
+               <center>
+                  <div id="image-box">
+                    <img id="image-display" />
+                    <div id="pred-result-dens" class="hidden" ></div>
+                    <div id="pred-result" class="hidden"></div>
+                    <div id="pred-acc" class="hidden"></div>
+                    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+                        <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+                    </svg>
+                    {{ a }}
+                  
+                  </div>
+            </center>
+           <br>
+           <br>
+               <div id="box">
+                <p style="margin-left: 1%; margin-right: 1%; text-align: center; font-family: Lato; font-size: 1.4rem; font-weight: 700;">
+                  Rio Julian Azis Pratama - 21120116120011<br>
+                  Departemen Teknik Komputer, Universitas Diponegoro
+  
+                 </p>
+          
+              </div>
+               
+</div>
+
+
+  
+</div>
+
+{% endblock %}
