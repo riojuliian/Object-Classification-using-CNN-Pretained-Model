@@ -2,7 +2,7 @@
 
 <p align="center">
   <kbd>
-    <img src="https://lh3.googleusercontent.com/32_EXO4EASMBdwG7Rgqb5gg7ncwHhAZNjtRqZ1hgMlzBjptjNNa0JxpSH0l04Xi7hQBXw9HczzntQQ=w1920-h902-rw"/>
+    <img src="https://i.ibb.co/vw4wZJ4/Picture1.png"/>
   </kbd>
 </p>
    
